@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Metronic | Dashboard
+			首页
 		</title>
 		<meta name="description" content="Latest updates and statistic charts"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 		<!--begin::Web font -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script th:src="@{/js/webfont.js}"></script>
 		<script>
           WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -22,12 +22,12 @@
 		<!--end::Web font -->
         <!--begin::Base Styles -->  
         <!--begin::Page Vendors -->
-		<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/vendors/custom/fullcalendar/fullcalendar.bundle.css}" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors -->
-		<link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/vendors/base/vendors.bundle.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/demo/default/base/style.bundle.css}" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="assets/demo/default/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" th:href="@{/images/favicon.ico}" />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -43,7 +43,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
+										<img alt="" th:src="@{/css/demo/default/media/img/logo/logo_default_dark.png}"/>
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -455,7 +455,7 @@
 															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
 																<a  href="header/actions.html" class="m-menu__link ">
 																	<span class="m-menu__link-text">
-																		Sources & Mediums
+																		Sources Mediums
 																	</span>
 																</a>
 															</li>
@@ -483,7 +483,7 @@
 															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
 																<a  href="header/actions.html" class="m-menu__link ">
 																	<span class="m-menu__link-text">
-																		Audit & Logs
+																		Audit  Logs
 																	</span>
 																</a>
 															</li>
@@ -682,7 +682,7 @@
 														<form  class="m-list-search__form">
 															<div class="m-list-search__form-wrapper">
 																<span class="m-list-search__form-input-wrapper">
-																	<input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
+																	<input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search..."/>
 																</span>
 																<span class="m-list-search__form-icon-close" id="m_quicksearch_close">
 																	<i class="la la-remove"></i>
@@ -895,7 +895,7 @@
 																		<div class="m-stack__item m-stack__item--center m-stack__item--middle">
 																			<span class="">
 																				All caught up!
-																				<br>
+																				<br/>
 																				No new logs.
 																			</span>
 																		</div>
@@ -967,7 +967,7 @@
 										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
 											<a href="#" class="m-nav__link m-dropdown__toggle">
 												<span class="m-topbar__userpic">
-													<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt=""/>
+													<img th:src="@{/css/app/media/img/users/user4.jpg}" class="m--img-rounded m--marginless m--img-centered" alt=""/>
 												</span>
 												<span class="m-topbar__username m--hide">
 													Nick
@@ -976,10 +976,10 @@
 											<div class="m-dropdown__wrapper">
 												<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
 												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
+													<div class="m-dropdown__header m--align-center" style="background: url(/css/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
 														<div class="m-card-user m-card-user--skin-dark">
 															<div class="m-card-user__pic">
-																<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
+																<img th:src="@{/css/app/media/img/users/user4.jpg}" class="m--img-rounded m--marginless" alt=""/>
 															</div>
 															<div class="m-card-user__details">
 																<span class="m-card-user__name m--font-weight-500">
@@ -1596,7 +1596,7 @@
 																<span></span>
 															</i>
 															<span class="m-menu__link-text">
-																Checkbox & Radio
+																Checkbox  Radio
 															</span>
 														</a>
 													</li>
@@ -2976,13 +2976,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo3.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo3.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														Phyton
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Programming Language
 													</span>
@@ -2995,13 +2995,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo1.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo1.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														FlyThemes
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Let's Fly Fast Again Language
 													</span>
@@ -3014,13 +3014,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo2.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo2.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														AirApp
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														Awesome App For Project Management
 													</span>
@@ -3189,7 +3189,7 @@
 									<div class="m-portlet__body">
 										<div class="m-widget19">
 											<div class="m-widget19__pic m-portlet-fit--top m-portlet-fit--sides" style="min-height-: 286px">
-												<img src="assets/app/media/img//blog/blog1.jpg" alt="">
+												<img th:src="@{/css/app/media/img//blog/blog1.jpg}" alt=""/>
 												<h3 class="m-widget19__title m--font-light">
 													Introducing New Feature
 												</h3>
@@ -3198,13 +3198,13 @@
 											<div class="m-widget19__content">
 												<div class="m-widget19__header">
 													<div class="m-widget19__user-img">
-														<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="">
+														<img class="m-widget19__img" th:src="@{/css/app/media/img//users/user1.jpg}" alt=""/>
 													</div>
 													<div class="m-widget19__info">
 														<span class="m-widget19__username">
 															Anna Krox
 														</span>
-														<br>
+														<br/>
 														<span class="m-widget19__time">
 															UX/UI Designer, Google
 														</span>
@@ -3440,7 +3440,7 @@
 													<div class="m-widget2__item m-widget2__item--primary">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3448,7 +3448,7 @@
 															<span class="m-widget2__text">
 																Make Metronic Great  Again.Lorem Ipsum Amet
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By Bob
@@ -3511,7 +3511,7 @@
 													<div class="m-widget2__item m-widget2__item--warning">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3519,7 +3519,7 @@
 															<span class="m-widget2__text">
 																Prepare Docs For Metting On Monday
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By Sean
@@ -3582,7 +3582,7 @@
 													<div class="m-widget2__item m-widget2__item--brand">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3590,7 +3590,7 @@
 															<span class="m-widget2__text">
 																Make Widgets Great Again.Estudiat Communy Elit
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By Aziko
@@ -3653,7 +3653,7 @@
 													<div class="m-widget2__item m-widget2__item--success">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3661,7 +3661,7 @@
 															<span class="m-widget2__text">
 																Make Metronic Great Again.Lorem Ipsum
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By James
@@ -3724,7 +3724,7 @@
 													<div class="m-widget2__item m-widget2__item--danger">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3732,7 +3732,7 @@
 															<span class="m-widget2__text">
 																Completa Financial Report For Emirates Airlines
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By Bob
@@ -3795,7 +3795,7 @@
 													<div class="m-widget2__item m-widget2__item--info">
 														<div class="m-widget2__checkbox">
 															<label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
-																<input type="checkbox">
+																<input type="checkbox"/>
 																<span></span>
 															</label>
 														</div>
@@ -3803,7 +3803,7 @@
 															<span class="m-widget2__text">
 																Completa Financial Report For Emirates Airlines
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget2__user-name">
 																<a href="#" class="m-widget2__link">
 																	By Sean
@@ -3941,13 +3941,13 @@
 											<div class="m-widget3__item">
 												<div class="m-widget3__header">
 													<div class="m-widget3__user-img">
-														<img class="m-widget3__img" src="assets/app/media/img/users/user1.jpg" alt="">
+														<img class="m-widget3__img" th:src="@{/css/app/media/img/users/user1.jpg}" alt=""/>
 													</div>
 													<div class="m-widget3__info">
 														<span class="m-widget3__username">
 															Melania Trump
 														</span>
-														<br>
+														<br/>
 														<span class="m-widget3__time">
 															2 day ago
 														</span>
@@ -3965,13 +3965,13 @@
 											<div class="m-widget3__item">
 												<div class="m-widget3__header">
 													<div class="m-widget3__user-img">
-														<img class="m-widget3__img" src="assets/app/media/img/users/user4.jpg" alt="">
+														<img class="m-widget3__img" th:src="@{/css/app/media/img/users/user4.jpg}" alt=""/>
 													</div>
 													<div class="m-widget3__info">
 														<span class="m-widget3__username">
 															Lebron King James
 														</span>
-														<br>
+														<br/>
 														<span class="m-widget3__time">
 															1 day ago
 														</span>
@@ -3989,13 +3989,13 @@
 											<div class="m-widget3__item">
 												<div class="m-widget3__header">
 													<div class="m-widget3__user-img">
-														<img class="m-widget3__img" src="assets/app/media/img/users/user5.jpg" alt="">
+														<img class="m-widget3__img" th:src="@{/css/app/media/img/users/user5.jpg}" alt=""/>
 													</div>
 													<div class="m-widget3__info">
 														<span class="m-widget3__username">
 															Deb Gibson
 														</span>
-														<br>
+														<br/>
 														<span class="m-widget3__time">
 															3 weeks ago
 														</span>
@@ -4734,13 +4734,13 @@
 										<div class="m-widget4 m-widget4--chart-bottom" style="min-height: 480px">
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo3.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo3.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														Phyton
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Programming Language
 													</span>
@@ -4753,13 +4753,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo1.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo1.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														FlyThemes
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Let's Fly Fast Again Language
 													</span>
@@ -4772,15 +4772,15 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo4.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo4.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														Starbucks
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
-														Good Coffee & Snacks
+														Good Coffee  Snacks
 													</span>
 												</div>
 												<span class="m-widget4__ext">
@@ -4841,7 +4841,7 @@
 												<div class="m-widget5">
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product6.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product6.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -4872,7 +4872,7 @@
 															<span class="m-widget5__number">
 																19,200
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -4881,7 +4881,7 @@
 															<span class="m-widget5__number">
 																1046
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -4889,7 +4889,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product10.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product10.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -4917,7 +4917,7 @@
 															<span class="m-widget5__number">
 																24,583
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -4926,7 +4926,7 @@
 															<span class="m-widget5__number">
 																3809
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -4934,7 +4934,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product11.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product11.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -4962,7 +4962,7 @@
 															<span class="m-widget5__number">
 																10,054
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -4971,7 +4971,7 @@
 															<span class="m-widget5__number">
 																1103
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -4985,7 +4985,7 @@
 												<div class="m-widget5">
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product11.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product11.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5013,7 +5013,7 @@
 															<span class="m-widget5__number">
 																24,583
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -5022,7 +5022,7 @@
 															<span class="m-widget5__number">
 																3809
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5030,7 +5030,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product6.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product6.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5058,7 +5058,7 @@
 															<span class="m-widget5__number">
 																19,200
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -5067,7 +5067,7 @@
 															<span class="m-widget5__number">
 																1046
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5075,7 +5075,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product10.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product10.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5103,7 +5103,7 @@
 															<span class="m-widget5__number">
 																10,054
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -5112,7 +5112,7 @@
 															<span class="m-widget5__number">
 																1103
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5126,7 +5126,7 @@
 												<div class="m-widget5">
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product10.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product10.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5154,7 +5154,7 @@
 															<span class="m-widget5__number">
 																10.054
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -5163,7 +5163,7 @@
 															<span class="m-widget5__number">
 																1103
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5171,7 +5171,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product11.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product11.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5199,7 +5199,7 @@
 															<span class="m-widget5__number">
 																24,583
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																sales
 															</span>
@@ -5208,7 +5208,7 @@
 															<span class="m-widget5__number">
 																3809
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5216,7 +5216,7 @@
 													</div>
 													<div class="m-widget5__item">
 														<div class="m-widget5__pic">
-															<img class="m-widget7__img" src="assets/app/media/img//products/product6.jpg" alt="">
+															<img class="m-widget7__img" th:src="@{/css/app/media/img//products/product6.jpg}" alt=""/>
 														</div>
 														<div class="m-widget5__content">
 															<h4 class="m-widget5__title">
@@ -5244,7 +5244,7 @@
 															<span class="m-widget5__number">
 																19,200
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__sales">
 																1046
 															</span>
@@ -5253,7 +5253,7 @@
 															<span class="m-widget5__number">
 																1046
 															</span>
-															<br>
+															<br/>
 															<span class="m-widget5__votes">
 																votes
 															</span>
@@ -5347,13 +5347,13 @@
 										<div class="m-widget4">
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo5.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo5.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														Trump Themes
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														Make Metronic Great Again
 													</span>
@@ -5366,15 +5366,15 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo4.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo4.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														StarBucks
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
-														Good Coffee & Snacks
+														Good Coffee  Snacks
 													</span>
 												</div>
 												<span class="m-widget4__ext">
@@ -5385,13 +5385,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo3.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo3.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														Phyton
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Programming Language
 													</span>
@@ -5404,13 +5404,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo2.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo2.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														GreenMakers
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														Make Green Great Again
 													</span>
@@ -5423,13 +5423,13 @@
 											</div>
 											<div class="m-widget4__item">
 												<div class="m-widget4__img m-widget4__img--logo">
-													<img src="assets/app/media/img/client-logos/logo1.png" alt="">
+													<img th:src="@{/css/app/media/img/client-logos/logo1.png}" alt=""/>
 												</div>
 												<div class="m-widget4__info">
 													<span class="m-widget4__title">
 														FlyThemes
 													</span>
-													<br>
+													<br/>
 													<span class="m-widget4__sub">
 														A Let's Fly Fast Again Language
 													</span>
@@ -5482,7 +5482,7 @@
 								<li class="m-nav__item">
 									<a href="#" class="m-nav__link">
 										<span class="m-nav__link-text">
-											T&C
+											TC
 										</span>
 									</a>
 								</li>
@@ -5535,7 +5535,7 @@
 							<div class="m-messenger__messages">
 								<div class="m-messenger__message m-messenger__message--in">
 									<div class="m-messenger__message-pic">
-										<img src="assets/app/media/img//users/user3.jpg" alt=""/>
+										<img th:src="@{/css/app/media/img//users/user3.jpg}" alt=""/>
 									</div>
 									<div class="m-messenger__message-body">
 										<div class="m-messenger__message-arrow"></div>
@@ -5561,7 +5561,7 @@
 								</div>
 								<div class="m-messenger__message m-messenger__message--in">
 									<div class="m-messenger__message-pic">
-										<img src="assets/app/media/img//users/user3.jpg" alt=""/>
+										<img th:src="@{/css/app/media/img//users/user3.jpg}" alt=""/>
 									</div>
 									<div class="m-messenger__message-body">
 										<div class="m-messenger__message-arrow"></div>
@@ -5590,7 +5590,7 @@
 								</div>
 								<div class="m-messenger__message m-messenger__message--in">
 									<div class="m-messenger__message-pic">
-										<img src="assets/app/media/img//users/user3.jpg"  alt=""/>
+										<img th:src="@{/css/app/media/img//users/user3.jpg}"  alt=""/>
 									</div>
 									<div class="m-messenger__message-body">
 										<div class="m-messenger__message-arrow"></div>
@@ -5657,7 +5657,7 @@
 								</div>
 								<div class="m-messenger__message m-messenger__message--in">
 									<div class="m-messenger__message-pic">
-										<img src="assets/app/media/img//users/user3.jpg"  alt=""/>
+										<img th:src="@{/css/app/media/img//users/user3.jpg}"  alt=""/>
 									</div>
 									<div class="m-messenger__message-body">
 										<div class="m-messenger__message-arrow"></div>
@@ -5675,7 +5675,7 @@
 							<div class="m-messenger__seperator"></div>
 							<div class="m-messenger__form">
 								<div class="m-messenger__form-controls">
-									<input type="text" name="" placeholder="Type here..." class="m-messenger__form-input">
+									<input type="text" name="" placeholder="Type here..." class="m-messenger__form-input"/>
 								</div>
 								<div class="m-messenger__form-tools">
 									<a href="" class="m-messenger__form-attachment">
@@ -5698,7 +5698,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" checked="checked" name="">
+												<input type="checkbox" checked="checked" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5711,7 +5711,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5724,7 +5724,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5737,7 +5737,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5750,7 +5750,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" checked="checked" name="">
+												<input type="checkbox" checked="checked" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5768,7 +5768,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5781,7 +5781,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5794,7 +5794,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5807,7 +5807,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" checked="checked" name="">
+												<input type="checkbox" checked="checked" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -5820,7 +5820,7 @@
 									<span class="m-list-settings__item-control">
 										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
 											<label>
-												<input type="checkbox" name="">
+												<input type="checkbox" name=""/>
 												<span></span>
 											</label>
 										</span>
@@ -6125,14 +6125,14 @@
 		</ul>
 		<!-- begin::Quick Nav -->	
     	<!--begin::Base Scripts -->
-		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<script th:src="@{/css/vendors/base/vendors.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/css/demo/default/base/scripts.bundle.js}" type="text/javascript"></script>
 		<!--end::Base Scripts -->   
         <!--begin::Page Vendors -->
-		<script src="assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<script th:src="@{/css/vendors/custom/fullcalendar/fullcalendar.bundle.js}" type="text/javascript"></script>
 		<!--end::Page Vendors -->  
         <!--begin::Page Snippets -->
-		<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
+		<script th:src="@{/css/app/js/dashboard.js}" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 	</body>
 	<!-- end::Body -->

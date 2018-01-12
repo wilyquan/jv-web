@@ -27,8 +27,6 @@ public class AdminController extends BaseController{
 	 * @throws Exception */
 	@RequestMapping("/index.html")
 	public String index() throws Exception {
-		throw new Exception("Sam 错误");
-//		
-//		return "admin/index";
+		return "admin/index";
 	}
 }
