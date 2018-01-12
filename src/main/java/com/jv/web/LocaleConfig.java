@@ -12,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+import com.jv.web.advice.ErrorInterceptor;
+
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
@@ -36,5 +38,6 @@ public class LocaleConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
+        registry.addInterceptor(new ErrorInterceptor()).addPathPatterns("/**");  
     }
 }

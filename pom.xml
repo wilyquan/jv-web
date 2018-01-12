@@ -45,6 +45,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- 日志打印，建议加入 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
 		<!-- <dependency> <groupId>org.thymeleaf.extras</groupId> <artifactId>thymeleaf-extras-springsecurity4</artifactId> 
 			<version>3.0.2.RELEASE</version> <scope>compile</scope> </dependency> <dependency> 
 			<groupId>org.thymeleaf</groupId> <artifactId>thymeleaf-spring4</artifactId> 
@@ -70,51 +75,38 @@
 			<artifactId>springloaded</artifactId>
 			<version>1.2.6.RELEASE</version>
 		</dependency>
+		<!-- 可以实现热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <dependencies>
-                <!-- spring热部署-->
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>springloaded</artifactId>
-                    <version>1.2.6.RELEASE</version>
-                </dependency>
-            </dependencies>
-        </plugin>
-    </plugins>
-</build>
-	<!-- <build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration> <fork>true</fork> <jvmArguments> -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 
-					</jvmArguments> </configuration>
 				<dependencies>
+					<!-- spring热部署 -->
 					<dependency>
 						<groupId>org.springframework</groupId>
 						<artifactId>springloaded</artifactId>
 						<version>1.2.6.RELEASE</version>
 					</dependency>
 				</dependencies>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<fork>true</fork>
-				</configuration>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
+	<!-- <build> <plugins> <plugin> <groupId>org.springframework.boot</groupId> 
+		<artifactId>spring-boot-maven-plugin</artifactId> <configuration> <fork>true</fork> 
+		<jvmArguments> -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 
+		</jvmArguments> </configuration> <dependencies> <dependency> <groupId>org.springframework</groupId> 
+		<artifactId>springloaded</artifactId> <version>1.2.6.RELEASE</version> </dependency> 
+		</dependencies> <executions> <execution> <goals> <goal>repackage</goal> </goals> 
+		</execution> </executions> <configuration> <fork>true</fork> </configuration> 
+		</plugin> </plugins> </build> -->
 
 
 </project>
