@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 public abstract class BaseController {
-	Logger log = LoggerFactory.getLogger(getClass());
+	public Logger logger = LoggerFactory.getLogger(getClass());
 
 	/**
 	 * 全局异常拦截，封装报错信息

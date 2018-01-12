@@ -38,11 +38,11 @@ public class ErrorInterceptor implements HandlerInterceptor {
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 //		System.out.println(">>>MyInterceptor1>>>>>>>请求处理之后进行调用，但是在视图被渲染之前（Controller方法调用之后）");
-		if (response.getStatus() == 500) {
-			modelAndView.setViewName("/error/500");
-		} else if (response.getStatus() == 404) {
-			modelAndView.setViewName("/error/404");
-		}
+//		if (response.getStatus() == 500) {
+//			modelAndView.setViewName("/error/500");
+//		} else if (response.getStatus() == 404) {
+//			modelAndView.setViewName("/error/404");
+//		}
 	}
 
 	/**
