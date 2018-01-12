@@ -44,13 +44,18 @@
 		
 		console.log("ready");
 		 $("#m_aside_left").delegate("a", "click", function() {
+			 var href = $(this).attr("href");
+			 if (href == "#")
+			 {
+				 return false;
+			}
 			console.log("m_aside_left" + $(this).attr("href"));
 			$.ajax({
                 url: $(this).attr("href"),
                 cache: false
             })
             .done(function (html) {
-            /* 	console.log(html); */
+            		console.log(html); 
             		 $("#admin-content").empty()
                  $("#admin-content").append(html);
             });
@@ -234,7 +239,7 @@
 		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 		<!--end::Page Snippets -->
 		
-		<script>
+	<!-- 	<script>
 		// 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
 
 		// 1. 定义（路由）组件。
@@ -266,7 +271,7 @@
 		}).$mount('#app')
 
 		// 现在，应用已经启动了！
-		</script>
+		</script> -->
 		
 	</body>
 	<!-- end::Body -->
