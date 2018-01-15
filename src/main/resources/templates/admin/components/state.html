@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="admin/layout/layout-content">
 <head>
+<title>hello</title>
+<script>
+ console.log("hello state color");
+</script>
 </head>
 <body>
-						<div class="row">
+<!-- 主区域 [[ -->
+	<div class="m-content">
+		<div layout:fragment="content">
+		   <div class="row">
 							<div class="col-xl-6">
 								<!--begin::Portlet-->
 								<div class="m-portlet m-portlet--tab">
@@ -465,6 +474,12 @@ m--font-light
 	<!--end::Portlet-->
 </div>
 </div>
+		</div>
+	</div>
+	<!-- 主区域 ]] -->
+						
+
+
 </body>
 </html>
 

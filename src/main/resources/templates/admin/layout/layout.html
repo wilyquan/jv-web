@@ -13,6 +13,7 @@
 		<script th:src="@{/js/webfont.js}"></script>
 		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
 		<script th:src="@{/js/jquery-ui-1.10.3.min.js}"></script>
+		<script th:src="@{/js/vue.min.js}"></script>
 		<script>
           WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -72,7 +73,6 @@
              cache: true
          })
          .done(function (html) {
-        	 debugger;
          		console.log(html); 
          });
 		
@@ -111,7 +111,7 @@
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 					<!-- BEGIN: Subheader -->
-					<div th:replace="admin/layout/header-sub :: header-sub"></div>
+					<!-- <div th:replace="admin/layout/header-sub :: header-sub"></div> -->
 					<!-- END: Subheader -->
 					<div class="m-content" layout:fragment="content">
 					<div id="admin-content"></div>
