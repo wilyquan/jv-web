@@ -86,6 +86,11 @@ public class Menu {
 		menu.addSubMenu(new Menu("2", "Typography", "/components/base/typography.html",""));
 		
 		menus.add(menu);
+		
+		menu = new Menu("0", "base1", "#","");
+		menu.addSubMenu(new Menu("1", "State Colors1", "/components/base/state.html",""));
+		menu.addSubMenu(new Menu("2", "Typography1", "/components/base/typography.html",""));
+		menus.add(menu);
 		return menus;
 		
 	}
