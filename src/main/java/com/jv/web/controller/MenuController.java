@@ -31,7 +31,7 @@ public class MenuController extends BaseController{
 
 	@RequestMapping("")
 	@ResponseBody
-	public List<Menu> index() throws Exception {
+	public List<Menu> index() {
 		List<Menu> menus = Menu.getDefaultMenus();
 		return menus;
 	}

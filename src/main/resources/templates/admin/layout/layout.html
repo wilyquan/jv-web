@@ -97,6 +97,14 @@
 					console.log(a);
 					$(viewId).html(a);
 				 }
+				 
+				 var sideMenuView = new Vue({
+					  el: '#m_ver_menu',
+					  data: {
+					   menus:[]
+					  },
+				});
+				 
 				 //初始化菜单
 				$.ajax({
 		             url: "menu",
@@ -106,7 +114,8 @@
 		        	 	console.log(data);
 		        	 	if (data !=null){
 		 			 	/* render("#m-menu-group", "#menuTpl", menus, 0); */
-		 			 	rendeTpl("#menuTpl", "#m-menu-group", data);
+		 			 	/* rendeTpl("#menuTpl", "#m-menu-group", data); */
+		        	 		sideMenuView.menus = data;
 		 			 }
 		         });
 				 

@@ -30,17 +30,34 @@
 					<h4 class="m-menu__section-text">Components</h4> <i
 					class="m-menu__section-icon flaticon-more-v3"></i>
 				</li>
-				<div id="m-menu-group">
-				</div>
-			     <script type="text/template" id="menuTpl" th:inline="javascript">
-						
-				<tr>
-<td>Onions</td>
-<td>2.41</td>
-  </tr>
-				</script>
+				<!--/*<li class="m-loader" style="width: 30px;display: inline-block;"></li>*/-->
+				<!--/*  vue.js 菜单生成模版  */-->
+				<template v-for="menu in menus">
+	       			<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+						<a href="#" class="m-menu__link m-menu__toggle"> 
+							<i class="m-menu__link-icon flaticon-layers"></i> 
+							<span class="m-menu__link-text"> {{ menu.name }} </span> 
+							<i class="m-menu__ver-arrow la la-angle-right"></i>
+						</a>
+						<template v-for="subMenu in menu.subMenus">
+						<div class="m-menu__submenu">
+							<span class="m-menu__arrow"></span>
+							<ul class="m-menu__subnav">
+								<li class="m-menu__item " aria-haspopup="true">
+									<a :href="subMenu.url" class="m-menu__link "> 
+									<i class="m-menu__link-bullet m-menu__link-bullet--dot"> <span></span> </i> 
+									<span class="m-menu__link-text">{{ subMenu.name }}</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</template>
+					</li>
+     			</template>
 				
-				<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"
+			  
+				
+				<!--/* <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"
 					data-menu-submenu-toggle="hover"><a href="#"
 					class="m-menu__link m-menu__toggle"> <i
 						class="m-menu__link-icon flaticon-share"></i> <span
@@ -1012,9 +1029,9 @@
 											</i> <span class="m-menu__link-text"> Error 6 </span>
 										</a></li>
 									</ul>
-								</div></li>
+								</div></li> 
 						</ul>
-					</div></li>
+					</div></li>*/-->    
 			</ul>
 		</div>
 		<!-- END: Aside Menu -->
