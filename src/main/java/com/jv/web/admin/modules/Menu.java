@@ -90,7 +90,8 @@ public class Menu {
 		menu = new Menu("0", "datatables", "#","");
 		menu.addSubMenu(new Menu("1", "Local Data", "/components/base/data-local.html",""));
 		menu.addSubMenu(new Menu("2", "Local Ajax", "/components/base/data-ajax.html",""));
-		menu.addSubMenu(new Menu("2", "Tables", "/components/base/tables.html",""));
+		menu.addSubMenu(new Menu("3", "Tables", "/components/base/tables.html",""));
+		menu.addSubMenu(new Menu("4", "Tables2", "/components/base/tables2.html",""));
 		menus.add(menu);
 		return menus;
 		
