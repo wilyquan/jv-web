@@ -35,4 +35,11 @@ public class MenuController extends BaseController{
 		List<Menu> menus = Menu.getDefaultMenus();
 		return menus;
 	}
+	
+	@RequestMapping("nuxt")
+	@ResponseBody
+	public List<Menu> nuxtMenu() {
+		List<Menu> menus = Menu.getNuxtMenu();
+		return menus;
+	}
 }
